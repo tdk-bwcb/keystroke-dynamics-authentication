@@ -39,16 +39,51 @@ Ensemble tree-based models proved highly effective for keystroke-based authentic
 
 ---
 
-## 📁 Repository Structure
-Data/ # Dataset (if included)
-Images/ # Supporting visuals
-Jupyter Notebooks/ # Experiments & training
-test/ # Test scripts
-KeystrokeLoggingApplication.jar
-Keystrokes.csv
-random_forest_model.pkl # Trained model
-PROJECT_ARCHITECTURE.md
-README.md
+keystroke-authentication/
+│
+├── data/
+│   ├── raw/                    # Original untouched data
+│   │   └── keystrokes.csv
+│   ├── processed/              # Cleaned / feature-engineered data
+│   │   └── keystrokes_processed.csv
+│
+├── notebooks/
+│   ├── 01_exploration.ipynb
+│   ├── 02_feature_engineering.ipynb
+│   ├── 03_model_training.ipynb
+│   └── 04_evaluation.ipynb
+│
+├── src/
+│   ├── __init__.py
+│   ├── preprocessing.py
+│   ├── feature_selection.py
+│   ├── models/
+│   │   ├── random_forest.py
+│   │   ├── knn.py
+│   │   ├── adaboost.py
+│   │   └── ensemble.py
+│   ├── evaluation.py
+│   └── utils.py
+│
+├── models/
+│   └── random_forest.pkl
+│
+├── app/
+│   └── KeystrokeLoggingApplication.jar
+│
+├── reports/
+│   ├── figures/
+│   └── results.md
+│
+├── tests/
+│   └── test_pipeline.py
+│
+├── README.md
+├── requirements.txt
+├── PROJECT_ARCHITECTURE.md
+├── .gitignore
+└── LICENSE
+
 
 ---
 
